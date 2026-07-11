@@ -1,13 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="12" fill="#faf7f2"/>
   <!-- page block, short side -->
-  <polygon points="36,32 50,25 50,33 36,40" fill="#efe6d8"/>
-  <line x1="37" y1="34.5" x2="50" y2="28" stroke="#c9b998" stroke-width="1"/>
-  <line x1="37" y1="36.5" x2="50" y2="30" stroke="#c9b998" stroke-width="1"/>
+  <polygon points="35,38 56,27.5 56,39.5 35,50" fill="#efe6d8"/>
+  <line x1="36.5" y1="41.75" x2="56" y2="32" stroke="#c9b998" stroke-width="1.5"/>
+  <line x1="36.5" y1="44.75" x2="56" y2="35" stroke="#c9b998" stroke-width="1.5"/>
   <!-- back cover edge -->
-  <polygon points="36,38.5 50,31.5 50,33 36,40" fill="#20655f"/>
+  <polygon points="35,47.75 56,37.25 56,39.5 35,50" fill="#20655f"/>
   <!-- spine, long side -->
-  <polygon points="18,23 36,32 36,40 18,31" fill="#20655f"/>
+  <polygon points="8,24.5 35,38 35,50 8,36.5" fill="#20655f"/>
   <!-- front cover, top face -->
-  <polygon points="32,16 50,25 36,32 18,23" fill="#2e837e"/>
+  <polygon points="29,14 56,27.5 35,38 8,24.5" fill="#2e837e"/>
+  <!-- bombay pink cover pattern -->
+  <polygon points="29.72,16.88 50.24,27.14 34.28,35.12 13.76,24.86" fill="none" stroke="#f2a09b" stroke-width="1.2"/>
+  <polygon points="34.7,27.35 29.9,27.05 29.3,24.65 34.1,24.95" fill="#f2a09b"/>
+  <polygon points="27.95,23.975 25.55,23.825 25.25,22.625 27.65,22.775" fill="#f2a09b"/>
+  <polygon points="38.75,29.375 36.35,29.225 36.05,28.025 38.45,28.175" fill="#f2a09b"/>
 </svg>
