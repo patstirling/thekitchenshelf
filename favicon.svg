@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#faf7f2"/>
+  <!-- page block, short side -->
+  <polygon points="36,32 50,25 50,33 36,40" fill="#efe6d8"/>
+  <line x1="37" y1="34.5" x2="50" y2="28" stroke="#c9b998" stroke-width="1"/>
+  <line x1="37" y1="36.5" x2="50" y2="30" stroke="#c9b998" stroke-width="1"/>
+  <!-- back cover edge -->
+  <polygon points="36,38.5 50,31.5 50,33 36,40" fill="#20655f"/>
+  <!-- spine, long side -->
+  <polygon points="18,23 36,32 36,40 18,31" fill="#20655f"/>
+  <!-- front cover, top face -->
+  <polygon points="32,16 50,25 36,32 18,23" fill="#2e837e"/>
+</svg>
