@@ -138,6 +138,16 @@
       max-width: 100%;
       margin: 0 auto;
     }
+    /* On narrow screens the widget shows its own button, so drop the clip and ours */
+    @media (max-width: 640px) {
+      .widget {
+        height: auto;
+        overflow: visible;
+      }
+      .viewall {
+        display: none;
+      }
+    }
     .dots {
       display: flex;
       gap: 12px;
