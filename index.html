@@ -14,16 +14,17 @@
     // Runs before body paints, so the right colour/logo are set from frame one.
     (function () {
       var palette = [
-        { bg: '#C65B59', text: '#ffffff', logo: 'logo-landscape-white.png' },
-        { bg: '#E4C551', text: '#ffffff', logo: 'logo-landscape-white.png' },
-        { bg: '#317189', text: '#ffffff', logo: 'logo-landscape-white.png' },
-        { bg: '#4189A6', text: '#ffffff', logo: 'logo-landscape-white.png' }
+        { bg: '#C65B59', accent: '#C65B59', text: '#ffffff', logo: 'logo-landscape-white.png' },
+        { bg: '#E4C551', accent: '#8C6A0B', text: '#ffffff', logo: 'logo-landscape-white.png' },
+        { bg: '#317189', accent: '#317189', text: '#ffffff', logo: 'logo-landscape-white.png' },
+        { bg: '#4189A6', accent: '#2F6E87', text: '#ffffff', logo: 'logo-landscape-white.png' }
       ];
       var choice = palette[Math.floor(Math.random() * palette.length)];
       window.__choice = choice;
       window.__palette = palette;
       document.documentElement.style.setProperty('--bg', choice.bg);
       document.documentElement.style.setProperty('--text', choice.text);
+      document.documentElement.style.setProperty('--accent', choice.accent);
     })();
   </script>
   <style>
@@ -97,6 +98,41 @@
     .insta span {
       border-bottom: 1px solid currentColor;
       padding-bottom: 1px;
+    }
+    .gift {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: clamp(0.6rem, 2vh, 1.1rem);
+      padding: 0.8rem 1.7rem;
+      background: #ffffff;
+      color: var(--accent);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .gift:hover,
+    .gift:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+    }
+    .gift svg {
+      width: 1.3em;
+      height: 1.3em;
+      flex: none;
+    }
+    .gift-note {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+      margin: 0;
+      opacity: 0.9;
     }
     .favourites {
       align-self: stretch;
@@ -192,6 +228,18 @@
     <span>Follow us on Instagram</span>
   </a>
 
+  <a class="gift" href="https://app.squareup.com/gift/ML3SCW36ATVH2/order" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="8" width="18" height="4" rx="1"/>
+      <path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"/>
+      <path d="M12 8v13"/>
+      <path d="M12 8C10.5 4.5 7 4 6.5 6s2.5 2 5.5 2z"/>
+      <path d="M12 8c1.5-3.5 5-4 5.5-2s-2.5 2-5.5 2z"/>
+    </svg>
+    Buy a gift card
+  </a>
+  <p class="gift-note">The perfect present for anyone who loves to cook</p>
+
   <div class="favourites">
     <div class="widget">
     <script
@@ -235,6 +283,7 @@
       window.__choice = c;
       document.documentElement.style.setProperty('--bg', c.bg);
       document.documentElement.style.setProperty('--text', c.text);
+      document.documentElement.style.setProperty('--accent', c.accent);
       logoEl.src = c.logo;
       dotEls.forEach(function (d) {
         d.classList.toggle('active', d.dataset.bg === c.bg);
