@@ -99,11 +99,26 @@
       border-bottom: 1px solid currentColor;
       padding-bottom: 1px;
     }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem 1.25rem;
+      margin-top: clamp(0.6rem, 2vh, 1.1rem);
+    }
+    .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      max-width: 17rem;
+    }
     .gift {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      margin-top: clamp(0.6rem, 2vh, 1.1rem);
+      white-space: nowrap;
       padding: 0.8rem 1.7rem;
       background: #ffffff;
       color: var(--accent);
@@ -228,17 +243,31 @@
     <span>Follow us on Instagram</span>
   </a>
 
-  <a class="gift" href="https://app.squareup.com/gift/ML3SCW36ATVH2/order" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <rect x="3" y="8" width="18" height="4" rx="1"/>
-      <path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"/>
-      <path d="M12 8v13"/>
-      <path d="M12 8C10.5 4.5 7 4 6.5 6s2.5 2 5.5 2z"/>
-      <path d="M12 8c1.5-3.5 5-4 5.5-2s-2.5 2-5.5 2z"/>
-    </svg>
-    Buy a gift card
-  </a>
-  <p class="gift-note">The perfect present for anyone who loves to cook. For use in-store only.</p>
+  <div class="actions">
+    <div class="action">
+      <a class="gift" href="https://app.squareup.com/gift/ML3SCW36ATVH2/order" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="8" width="18" height="4" rx="1"/>
+          <path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"/>
+          <path d="M12 8v13"/>
+          <path d="M12 8C10.5 4.5 7 4 6.5 6s2.5 2 5.5 2z"/>
+          <path d="M12 8c1.5-3.5 5-4 5.5-2s-2.5 2-5.5 2z"/>
+        </svg>
+        Buy a gift card
+      </a>
+      <p class="gift-note">The perfect present for anyone who loves to cook. For use in-store only.</p>
+    </div>
+    <div class="action">
+      <a class="gift" href="https://uk.bookshop.org/shop/thekitchenshelf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 8h14l-1 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/>
+          <path d="M9 10V7a3 3 0 0 1 6 0v3"/>
+        </svg>
+        Order online
+      </a>
+      <p class="gift-note">Get your next delicious volume via our bookshop.org shop</p>
+    </div>
+  </div>
 
   <div class="favourites">
     <div class="widget">
